@@ -1,0 +1,53 @@
+{
+  "name": "chernsky-lens-countdown",
+  "productName": "טיימר העדשה – צ'רנסקי",
+  "version": "1.0.0",
+  "description": "ספירה לאחור בעדשת מצלמה – סמינר צ'רנסקי",
+  "main": "electron-main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist": "electron-builder --mac --win"
+  },
+  "build": {
+    "appId": "com.chaya.chernsky-lens-countdown",
+    "artifactName": "chernsky-lens-countdown-${version}-${os}-${arch}.${ext}",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron-main.js",
+      "index.html"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "category": "public.app-category.entertainment"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "executableName": "chernsky-lens-countdown"
+    }
+  },
+  "devDependencies": {
+    "electron": "^38.8.6",
+    "electron-builder": "^26.18.0"
+  }
+}
