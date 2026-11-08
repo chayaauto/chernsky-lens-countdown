@@ -2,3 +2,5 @@ node_modules/
 dist/
 _tmp/
 _to_delete/
+*.mp4
+.claude/
