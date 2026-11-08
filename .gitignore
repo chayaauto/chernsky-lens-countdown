@@ -4,3 +4,4 @@ _tmp/
 _to_delete/
 *.mp4
 .claude/
+*.pdf
