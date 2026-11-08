@@ -869,9 +869,7 @@ function playScene(i){
   requestAnimationFrame(() => requestAnimationFrame(() => { bar.style.transition = "width " + sc[3] + "ms linear"; bar.style.width = "100%"; }));
   demoTimer = setTimeout(() => { if (demoChain && i + 1 < DEMO.length) playScene(i + 1); else showMenu(); }, sc[3]);
 }
-// on the web (GitHub Pages) the page is a showcase: it always opens the demo menu; the app on the hallway computer runs the real timer
-const ONLINE = /(^|\.)github\.io$/.test(location.hostname);
-const demoArg = Q.get("demo") || (location.hash.startsWith("#demo") ? (location.hash.slice(6) || "1") : null) || (ONLINE ? "1" : null);
+const demoArg = Q.get("demo") || (location.hash.startsWith("#demo") ? (location.hash.slice(6) || "1") : null);
 
 /* ================= start ================= */
 fit();
